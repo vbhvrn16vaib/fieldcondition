@@ -9,8 +9,10 @@
  ### Prerequisites
  
  You will need below things to run project smoothly,
- 1. java 1.8 
- 2. spring boot
+ ````
+ jdk 1.8
+ maven 3.3+
+ ```` 
  
  once the repository is cloned. please run 
   ```
@@ -23,11 +25,22 @@
  
 ### Installing
 
- * Please clone the whole repository. 
+ * Please clone the whole repository. `git clone <project>`
  * Once clone is complete, please run `mvn clean install`
  
- ### Running the test:
- Test can run using command `mvn clean install`
+ ### Test
+ Test can run using command `mvn test`
+ Have tried to cover all the basic testcases. (Controller test cases have the IT test cases as well).
+ It contains around 10 test cases. 
  
- ###Implementation
- It uses the navigable match which works on storing the data
+ ### Implementation
+ 
+ It uses the navigable map which is a threadsafe map and can help in getting rid of the data which is older than 30 days in constant time.
+ [Navigable Map](https://docs.oracle.com/javase/8/docs/api/index.html?java/util/NavigableMap.html)
+ 
+ ### Repository
+ 
+ As of now in this project we are using a internal cache which is a map. (Map is used just to group the similar days data)
+ But we can use the proper persistant store. 
+ 
+ 
