@@ -43,4 +43,31 @@
  As of now in this project we are using a internal cache which is a map. (Map is used just to group the similar days data)
  But we can use the proper persistant store. 
  
+ ### Application
+ 
+ Application is accessible with the port 8080.(default port)
+ 
+ You can perform the below operations
+ 
+ Get field stats
+ ````
+ GET /field-statistics
+ ````
+ 
+ Add field stats
+ ````
+ POST /field-conditions
+ 
+ Request : 
+ {
+        "vegetation" : 0.45,
+        "occurrenceAt" : "2019-07-23T08:50Z"
+ }
+ ```` 
+ 
+ [Swagger](http://localhost:8080/swagger-ui.html#/)
+ 
+ ````
+ http://localhost:8080/swagger-ui.html#/
+ ````
  
